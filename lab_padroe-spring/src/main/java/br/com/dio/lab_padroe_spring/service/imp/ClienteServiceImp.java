@@ -33,12 +33,8 @@ public class ClienteServiceImp implements ClienteService {
     @Override
     public Cliente buscarPorId(Long id) {
         // Buscar Cliente por ID
-        if (repository.findById(id).isEmpty() || id == null) {
-            throw new RuntimeException("Cliente não encontrado com ID: " + id);
-        } else {
-            Optional<Cliente> cliente = repository.findById(id);
-            return cliente.get();
-        }
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Cliente de ID: " + id + ", não encontrado"));
 
     }
 
@@ -50,12 +46,12 @@ public class ClienteServiceImp implements ClienteService {
     @Override
     public void atualizar(Long id, Cliente cliente) {
         // Buscar Cliente por ID, caso exista:
-        Optional<Cliente> clienteExiste = repository.findById(id);
-        if (clienteExiste.isPresent()) {
-            // Verificar se o endereço do Cliente já existe ( pelo CEP )
+        if (repository.existsById(id)) {
+            // Garanttindo que vai sobescrever
+            cliente.setId(id);
             salvarClienteComCep(cliente);
-            // Caso não exista, integrar com o ViaCep e persistir o retorno
-            // Alterar Cliente, vinculando o endereço ( novo ou existente)
+        } else {
+            throw new RuntimeException("Cliente não encontrado com ID: " + id);
         }
 
     }

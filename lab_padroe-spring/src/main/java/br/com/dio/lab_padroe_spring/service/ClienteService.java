@@ -1,10 +1,7 @@
 package br.com.dio.lab_padroe_spring.service;
 
-import org.springframework.stereotype.Service;
-
 import br.com.dio.lab_padroe_spring.model.Cliente;
 
-@Service
 public interface ClienteService {
 
     Iterable<Cliente> buscarTodos();

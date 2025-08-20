@@ -19,5 +19,4 @@ public class Endereco {
     private String ddd;
     private String siafi;
 
-
 }
