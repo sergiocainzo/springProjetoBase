@@ -1,4 +1,4 @@
-# Cadastro de Clientes com Design Patterns - Spring Boot
+## Cadastro de Clientes com Design Patterns - Spring Boot
 
 Este projeto é uma API REST desenvolvida em **Spring Boot** que realiza o **cadastro de clientes** com integração automática ao serviço **ViaCEP** para busca de endereço pelo CEP.  
 
