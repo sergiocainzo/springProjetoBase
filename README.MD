@@ -4,6 +4,8 @@ Este projeto é uma API REST desenvolvida em **Spring Boot** que realiza o **cad
 
 O objetivo do projeto é demonstrar o uso prático de **Padrões de Projeto (Design Patterns)** em um contexto real.
 
+Este projeto foi desenvolvido como parte de um desafio proposto pela Digital Innovation One (DIO), com o objetivo de aplicar conceitos de arquitetura de software utilizando Spring Boot.
+
 ---
 
 ## Tecnologias Utilizadas
