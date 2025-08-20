@@ -49,6 +49,4 @@ Sinta-se à vontade para usar, modificar e compartilhar.
 
 ---
 
-# Desenvolvido
-
-por **Sergio Cainzo**
+# Desenvolvido por **Sergio Cainzo**
